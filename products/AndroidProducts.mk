@@ -1,6 +1,6 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/rascarlo_emulator.mk \
-    $(LOCAL_DIR)/rascarlo_grouper.mk \
-    $(LOCAL_DIR)/rascarlo_mako.mk \
-    $(LOCAL_DIR)/rascarlo_maguro.mk \
-    $(LOCAL_DIR)/rascarlo_manta.mk
+    $(LOCAL_DIR)/aospx_emulator.mk \
+    $(LOCAL_DIR)/aospx_grouper.mk \
+    $(LOCAL_DIR)/aospx_mako.mk \
+    $(LOCAL_DIR)/aospx_maguro.mk \
+    $(LOCAL_DIR)/aospx_manta.mk
