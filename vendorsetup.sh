@@ -1,5 +1,5 @@
 add_lunch_combo aospx_emulator-eng
-add_lunch_combo aospx_grouper-user
-add_lunch_combo aospx_mako-user
-add_lunch_combo aospx_maguro-user
-add_lunch_combo aospx_manta-user
+add_lunch_combo aospx_grouper-userdebug
+add_lunch_combo aospx_mako-userdebug
+add_lunch_combo aospx_maguro-userdebug
+add_lunch_combo aospx_manta-userdebug
