@@ -42,3 +42,33 @@ PRODUCT_COPY_FILES += \
     vendor/aospx/proprietary/common/system/lib/libjni_eglfence.so:system/lib/libjni_eglfence.so \
     vendor/aospx/proprietary/common/system/lib/libjni_filtershow_filters.so:system/lib/libjni_filtershow_filters.so \
     vendor/aospx/proprietary/common/system/lib/libjni_mosaic.so:system/lib/libjni_mosaic.so
+
+# Versioning System
+RELEASE = false
+AOSPX_VERSION_MAJOR = 2
+AOSPX_VERSION_MINOR = 0
+
+#Set AOSPX_BUILDTYPE
+ifdef AOSPX_NIGHTLY
+    AOSPX_BUILDTYPE := NIGHTLY
+endif
+ifdef AOSPX_EXPERIMENTAL
+    AOSPX_BUILDTYPE := EXPERIMENTAL
+endif
+ifdef AOSPX_RELEASE
+    AOSPX_BUILDTYPE := RELEASE
+endif
+# Set Unofficial if no buildtype set
+ifdef AOSPX_BUILDTYPE
+else
+    AOSPX_BUILDTYPE := UNOFFICIAL
+    AOSPX_VERSION_MAJOR :=
+    AOSPX_VERSION_MINOR :=
+endif
+
+# Set Aospx version
+ifdef AOSPX_RELEASE
+    AOSPX_VERSION := "AOSPX-JB-v"$(AOSPX_VERSION_MAJOR).$(AOSPX_VERSION_MINOR)
+else
+    AOSPX_VERSION := "AOSPX-JB-$(AOSPX_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M)
+endif    
