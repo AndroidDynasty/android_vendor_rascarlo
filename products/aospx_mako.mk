@@ -4,6 +4,9 @@ $(call inherit-product, device/lge/mako/full_mako.mk)
 # Inherit common product files.
 $(call inherit-product, vendor/aospx/configs/common.mk)
 
+# Inherit GSM common stuff.
+$(call inherit-product, vendor/aospx/configs/gsm.mk)
+
 # Inherit media effect blobs
 -include vendor/aospx/configs/common_media_effects.mk
 
