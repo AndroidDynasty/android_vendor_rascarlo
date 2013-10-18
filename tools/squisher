@@ -148,9 +148,6 @@ $SED -i \
 # Delete unnecessary binaries
 ( cd $REPACK/ota/system/bin; echo -e $DELETE_BINS | xargs rm -f; )
 
-# Delete leftover wireless driver
-# rm -rf $REPACK/ota/system/lib/modules/*/kernel/drivers/net
-
 # No need for recovery
 rm -rf $REPACK/ota/recovery
 
